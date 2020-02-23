@@ -21,8 +21,6 @@ axios.interceptors.request.use(config=> {
   return config
 })
 
-
-
 //将axios挂在到vue根实例上,这样所有组件都可以通过this.$http发起ajax请求
 Vue.prototype.$http = axios 
 

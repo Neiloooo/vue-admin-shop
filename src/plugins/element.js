@@ -4,12 +4,24 @@ import {Form, FormItem,Container,Header,Aside,Main,
 Menu,
 Submenu,
 MenuItemGroup,
-MenuItem
+MenuItem,
+Breadcrumb,
+BreadcrumbItem,
+Card, 
+Row,
+Col,
+Table,
+TableColumn,
+Switch,
+Tooltip,
+Pagination,
+Dialog,
+MessageBox
 } from 'element-ui'
 import {Input} from 'element-ui'
 //导入弹框组件,需要全局挂载才能生效
 import{Message} from 'element-ui'
-
+//注册为全局组件
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -22,5 +34,20 @@ Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItemGroup)
 Vue.use(MenuItem)
-//挂载vue的原型对象,通过$message进行调用
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+Vue.use(Card)
+Vue.use(Row)
+Vue.use(Col)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Switch)
+Vue.use(Tooltip)
+Vue.use(Pagination)
+Vue.use(Dialog)
+
+//挂载vue的原型对象,通过$message进行调用提示框
 Vue.prototype.$message=Message
+//$confirm调用提示盒子,带确认与取消那种
+Vue.prototype.$confirm=MessageBox.confirm
+ 
